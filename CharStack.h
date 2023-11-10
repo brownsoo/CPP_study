@@ -1,5 +1,5 @@
 // 클래스와 객체 (3)
-// 2018. 07. 03
+// Stack 클래스의 선언
 
 class CharStack {
     enum { size = 20 };
