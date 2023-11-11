@@ -9,7 +9,7 @@ Complex1 Complex1::mul(const Complex1& c) const {
 
 Complex1 Complex1::div(const Complex1& c) const {
     double d = c.rPart * c.rPart + c.iPart * c.iPart;
-    Complex1 c1 = mul(c1.conj());
+    Complex1 c1 = mul(c.conj());
     return Complex1 { c1.rPart / d,
                       c1.iPart / d };
 }

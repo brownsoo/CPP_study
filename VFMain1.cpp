@@ -16,5 +16,10 @@ int main() {
     cout << endl;
     v3.print();
     cout << endl;
+    
+    VecF v4{ 1.f, 2.f, 3.f };
+    v4.print();
+    cout << endl;
+    
     return 0;
 }
