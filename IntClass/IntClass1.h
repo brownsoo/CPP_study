@@ -1,5 +1,8 @@
 // 8강. 연산자 다중정의(1)
 
+#ifndef __INTCLASS1_H__
+#define __INTCLASS1_H__
+
 class IntClass1
 {
     int a;
@@ -11,3 +14,5 @@ class IntClass1
     }
     int getValue() const { return a; }
 };
+
+#endif

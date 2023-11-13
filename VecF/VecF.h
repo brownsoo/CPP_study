@@ -1,3 +1,6 @@
+#ifndef VECF_H
+#define VECF_H
+
 #include <iostream>
 #include <cstring>
 using namespace std;
@@ -49,4 +52,35 @@ public:
             cout << arr[i] << " ";
         cout << "]";
     }
+    
+    // 출력 연산자 다중 정의
+    // private 속성을 접근하기 위해 friend 선언
+    friend ostream& operator<<(ostream& os, const VecF& fv) {
+        os << "[ ";
+        for (int i=0; i<fv.n; i++)
+            os << fv.arr[i] << " ";
+        os << "]";
+        return os;
+    }
+    
+    // 대입 다중 정의
+    VecF& operator=(const VecF& fv) {
+        if (n != fv.n) {
+            delete[] arr;
+            arr = new float[n = fv.n];
+        }
+        memcpy(arr, fv.arr, sizeof(float) * n);
+        return *this;
+    }
+    
+    // 이동 대입 연산자 
+    VecF& operator=(VecF&& fv) {
+        delete[] arr;
+        n = fv.n;
+        arr = fv.arr;
+        fv.arr = nullptr;
+        return *this;
+    }
 };
+
+#endif

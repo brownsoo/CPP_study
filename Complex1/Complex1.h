@@ -1,6 +1,9 @@
 // 7강 클래스와 객체 (3)
 // 복소수 클래스 구현 (1)
 
+#ifndef __COMPLEX1_H__
+#define __COMPLEX1_H__
+
 class Complex1
 {
     double rPart, iPart;
@@ -28,3 +31,5 @@ public:
     Complex1 div(const Complex1 &c) const;
     void display() const;
 };
+
+#endif

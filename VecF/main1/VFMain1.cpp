@@ -1,6 +1,7 @@
 #include <iostream>
+#include "../VecF.h"
+
 using namespace std;
-#include "VecF.h"
 
 int main() {
     float a[3] = { 1, 2, 3 };

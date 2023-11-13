@@ -1,6 +1,11 @@
 {
-    "files.associations": {
-        "ostream": "cpp",
-        "initializer_list": "cpp"
-    }
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+    },
+    "C_Cpp.errorSquiggles": "disabled"
 }

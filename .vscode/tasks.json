@@ -1,40 +1,21 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "c++ build active file",
-            "command": "/usr/bin/cpp",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/build/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": "build",
-            "detail": "컴파일러: /usr/bin/cpp"
-        },
-        {
             "type": "shell",
-            "label": "g++ build active file",
+            "label": "g++ build",
             "command": "/usr/bin/g++",
             "args": [
                 "-std=c++17",
                 "-stdlib=libc++",
                 "-g",
-                "${file}",
+                "${fileDirname}/*.cpp",
                 "-o",
-                "${fileDirname}/build/${fileBasenameNoExtension}",
+                "${fileDirname}/${fileBasenameNoExtension}.o",
                 "&&",
-                "${fileDirname}/build/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.o"
             ],
             "options": {
-                "cwd": "${workspaceFolder}"
+                "cwd": "${fileDirname}"
             },
             "problemMatcher": [
                 "$gcc"
@@ -44,13 +25,6 @@
                 "isDefault": true
             },
             "detail": "컴파일러: /usr/bin/g++"
-        },
-        {
-            "label": "exec",
-            "type": "shell",
-            "command": "${fileDirname}/build/${fileBasenameNoExtension}",
-            "group": "build",
-            "problemMatcher": [],
         }
     ],
     "version": "2.0.0"

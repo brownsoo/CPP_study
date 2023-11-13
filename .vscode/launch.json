@@ -5,9 +5,11 @@
             "name": "cpp 활성 파일 빌드 및 디버그",
             "type": "lldb",
             "request": "launch",
-            "program": "${fileDirname}/build/${fileBasenameNoExtension}",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.o",
             "args": [],
-            "preLaunchTask": "g++ build active file",
+            "stopOnEntry": false,
+            "cwd": "${fileDirname}",
+            "preLaunchTask": "g++ build",
             "stdio": [null, null, null],
             "terminal": "integrated",
         }

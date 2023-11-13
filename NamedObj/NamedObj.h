@@ -1,3 +1,6 @@
+#ifndef NAMEDOBJ_H
+#define NAMEDOBJ_H
+
 #include <iostream>
 using namespace std;
 
@@ -18,3 +21,5 @@ class NamedObj {
         return nConstr - nDestr;
     }
 };
+
+#endif
