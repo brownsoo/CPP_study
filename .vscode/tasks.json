@@ -11,8 +11,8 @@
                 "${fileDirname}/*.cpp",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.o",
-                "&&",
-                "${fileDirname}/${fileBasenameNoExtension}.o"
+                // "&&",
+                // "${fileDirname}/${fileBasenameNoExtension}.o"
             ],
             "options": {
                 "cwd": "${fileDirname}"
@@ -25,6 +25,31 @@
                 "isDefault": true
             },
             "detail": "컴파일러: /usr/bin/g++"
+        },
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-std=c++17",
+                "-stdlib=libc++",
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.o",
+                // "&&",
+                // "${fileDirname}/${fileBasenameNoExtension}.o"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build"
+            },
+            "detail": "활성 파일만 컴파일: /usr/bin/g++"
         }
     ],
     "version": "2.0.0"

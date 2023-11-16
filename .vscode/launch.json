@@ -2,7 +2,7 @@
     "configurations": [
     
         {
-            "name": "cpp 활성 파일 빌드 및 디버그",
+            "name": "cpp 폴더 파일 빌드 및 디버그",
             "type": "lldb",
             "request": "launch",
             "program": "${fileDirname}/${fileBasenameNoExtension}.o",
@@ -10,6 +10,18 @@
             "stopOnEntry": false,
             "cwd": "${fileDirname}",
             "preLaunchTask": "g++ build",
+            "stdio": [null, null, null],
+            "terminal": "integrated",
+        },
+        {
+            "name": "cpp 활성 파일 빌드 및 디버그",
+            "type": "lldb",
+            "request": "launch",
+            "program": "${fileDirname}/${fileBasenameNoExtension}.o",
+            "args": [],
+            "stopOnEntry": false,
+            "cwd": "${fileDirname}",
+            "preLaunchTask": "g++ build active file",
             "stdio": [null, null, null],
             "terminal": "integrated",
         }
